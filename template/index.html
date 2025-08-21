@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hyderabad House Price Predictor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Hyderabad House Price Predictor</h1>
+    <form id="predictionForm">
+      
+      <!-- Other inputs stay same -->
+
+      <label for="bathrooms">Bathrooms:</label>
+      <input type="number" id="bathrooms" name="bathrooms" required>
+
+      <label for="property_age">Property Age (years):</label>
+      <input type="number" id="property_age" name="property_age" required>
+
+      <label for="property_size">Property Size (sq.ft):</label>
+      <input type="number" id="property_size" name="property_size" required>
+
+      <label for="totalFloor">Total Floors:</label>
+      <input type="number" id="totalFloor" name="totalFloor" required>
+
+      <label for="facing">Facing:</label>
+      <select id="facing" name="facing" required>
+        <option value="facingDesc_East">East</option>
+        <option value="facingDesc_West">West</option>
+        <option value="facingDesc_North">North</option>
+        <option value="facingDesc_South">South</option>
+        <option value="facingDesc_North-East">North-East</option>
+        <option value="facingDesc_South-East">South-East</option>
+        <option value="facingDesc_North-West">North-West</option>
+        <option value="facingDesc_South-West">South-West</option>
+        <option value="facingDesc_Don't Know">Don’t Know</option>
+      </select>
+
+      <label for="furnishing">Furnishing:</label>
+      <select id="furnishing" name="furnishing" required>
+        <option value="furnishing_Full">Full</option>
+        <option value="furnishing_Semi">Semi</option>
+        <option value="furnishing_Unfurnished">Unfurnished</option>
+      </select>
+
+      <label for="locality">Locality:</label>
+      <select id="locality" name="locality" required>
+        <option value="locality_Kondapur">Kondapur</option>
+        <option value="locality_Gachibowli">Gachibowli</option>
+        <option value="locality_Madhapur">Madhapur</option>
+        <option value="locality_Kukatpally">Kukatpally</option>
+        <option value="locality_Hitec City">Hitec City</option>
+        <option value="locality_Jubilee Hills">Jubilee Hills</option>
+      </select>
+
+      <label for="parking">Parking:</label>
+      <select id="parking" name="parking" required>
+        <option value="parking_NONE">None</option>
+        <option value="parking_TWO_WHEELER">Two-Wheeler</option>
+        <option value="parking_FOUR_WHEELER">Four-Wheeler</option>
+        <option value="parking_BOTH">Both</option>
+      </select>
+
+      <label for="waterSupply">Water Supply:</label>
+      <select id="waterSupply" name="waterSupply" required>
+        <option value="waterSupply_CORP_BORE">Corporation + Borewell</option>
+        <option value="waterSupply_CORPORATION">Corporation</option>
+        <option value="waterSupply_BOREWELL">Borewell</option>
+      </select>
+
+      <fieldset>
+        <legend>Amenities:</legend>
+        <div class="amenities-container">
+            <label class="amenity-item"><input type="checkbox" name="amenities" value="swimmingPool"> Swimming Pool</label>
+            <label class="amenity-item"><input type="checkbox" name="amenities" value="lift"> Lift</label>
+            <label class="amenity-item"><input type="checkbox" name="amenities" value="gym"> Gym</label>
+            <label class="amenity-item"><input type="checkbox" name="amenities" value="internet"> Internet</label>
+            <label class="amenity-item"><input type="checkbox" name="amenities" value="AC"> AC</label>
+            <label class="amenity-item"><input type="checkbox" name="amenities" value="club"> Club</label>
+            <label class="amenity-item"><input type="checkbox" name="amenities" value="INTERCOM"> Intercom</label>
+            <label class="amenity-item"><input type="checkbox" name="amenities" value="servant"> Servant</label>
+            <label class="amenity-item"><input type="checkbox" name="amenities" value="security"> Security</label>
+        </div>
+      </fieldset>
+
+      <button type="submit" id="submitBtn">Predict Price</button>
+    </form>
+
+    <div>
+      <h3 id="result"></h3>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

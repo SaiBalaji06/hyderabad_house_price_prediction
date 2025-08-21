@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f6f8;
+}
+
+.container {
+  max-width: 600px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  color: #444;
+  font-weight: bold;
+}
+
+form input, 
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #007bff;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+#result {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: green;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    margin: 15px;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
+
+fieldset {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+legend {
+  font-weight: bold;
+  color: #333;
+}
+
+.amenities-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.amenity-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f9f9f9;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.amenity-item:hover {
+  background: #eef6ff;
+}
+
+.amenity-item input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
